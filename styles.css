@@ -1,0 +1,22 @@
+body {
+    background-color: #4B0082; /* Dark purple background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #4B0082; /* White with 90% opacity */
+}
+
+.navbar h1 {
+    color: white;
+    margin: 0;
+}
+
+.navbar img {
+    height: 50px; /* Adjust logo size as needed */
+}

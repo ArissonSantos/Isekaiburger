@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%; height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #000;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      width: 100%;
+      /* IMAGEM DESKTOP (padrão) */
+      background: url('infernalburger-desktop.png') center center / cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 200px;
+    }
+
+    /* IMAGEM MOBILE */
+    @media (max-width: 768px) {
+      .hero {
+        background: url('infernalburger-mobile.png') center center / cover no-repeat;
+      }
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.1));
+    }
+
+    .actions {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 520px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      padding-bottom: 10px;
+    }
+
+    .btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 14px 20px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      transition: 0.2s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .btn:hover { transform: translateY(-2px); opacity: 0.95; }
+
+    .btn-primary {
+      background: #ffffff;
+      color: #111111;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.18);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.28);
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding: 16px; }
+
+      .actions {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .btn {
+        width: 100%;
+        min-height: 54px;
+        font-size: 15px;
+        border-radius: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="actions">
+      <a class="btn btn-primary" href="https://w.app/isekaiburger" target="_blank">SIM!</a>
+      <a class="btn btn-secondary" href="https://www.instagram.com/_isekaiburger/" target="_blank">NÃO</a>
+    </div>
+  </section>
+</body>
+</html>
